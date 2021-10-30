@@ -1,0 +1,20 @@
+{
+	"name": "abbas",
+	"version": "0.0.1",
+	"description": "Abbas is a discord bot",
+	"main": "main.js",
+	"repository": "https://github.com/sudanmerinosu/abbas",
+	"author": "Salih Gumus",
+	"license": "MIT",
+	"private": false,
+	"scripts": {
+		"start": "node main.js",
+		"dev": "nodemon main.js"
+	},
+	"dependencies": {
+		"discord.js": "^13.3.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.14"
+	}
+}
