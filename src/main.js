@@ -1,28 +1,9 @@
 require('dotenv').config();
-const { Connect_Client } = require('./client');
-const commandHandler = require('./commands');
-
-const client = Connect_Client();
+const { Client } = require('discord.js');
+const client = new Client({ intents: 32767 });
 
 const TOKEN = process.env.TOKEN;
 
-client.once('interactionCreate', async (interaction) => {
-	if (!interaction.isCommand()) return;
-
-	if (interaction.commandName === 'ping') {
-		await interaction.reply('Pong!');
-	}
-});
-
-client.once('ready', () => {
-	console.log("I'm ready to go 🎆");
-});
-
-client.on('message', commandHandler);
-
-// client.on('message', (msg) => {
-// 	if (msg.channelId === process.env.CHANNEL_ID && msg.content === 'ping')
-// 		msg.reply('Pong 🍾!');
-// });
+require('./handlers/events')(client);
 
 client.login(TOKEN);
