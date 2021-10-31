@@ -9,6 +9,7 @@ const PREFIX = process.env.PREFIX;
 const ACTIVITIY = process.env.ACTIVITIY;
 const ACTIVITIY_TYPE = process.env.ACTIVITIY_TYPE;
 const GUILD_ID = process.env.GUILD_ID;
+const PORT = process.env.PORT;
 
 module.exports = {
 	TOKEN,
@@ -17,4 +18,5 @@ module.exports = {
 	ACTIVITIY,
 	ACTIVITIY_TYPE,
 	GUILD_ID,
+	PORT,
 };
