@@ -8,4 +8,4 @@ client.commands = new Collection();
 require('./handlers/events')(client);
 require('./handlers/commands')(client);
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
