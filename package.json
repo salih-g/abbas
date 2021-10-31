@@ -14,7 +14,8 @@
 	"dependencies": {
 		"ascii-table": "^0.0.9",
 		"discord.js": "^13.3.0",
-		"glob": "^7.2.0"
+		"glob": "^7.2.0",
+		"mongoose": "^6.0.12"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.14"
