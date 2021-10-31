@@ -1,7 +1,7 @@
-const { Client, Collection, Intents } = require('discord.js');
+const { Client, Collection } = require('discord.js');
 const { TOKEN } = require('../config.js');
 
-const client = new Client({ intents: Intents.FLAGS.GUILDS });
+const client = new Client({ intents: 32767 });
 
 client.commands = new Collection();
 
