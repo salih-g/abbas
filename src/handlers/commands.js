@@ -15,7 +15,7 @@ const { GUILD_ID } = require('../../config.js');
 module.exports = async (client) => {
 	const Table = new Ascii('Command Loaded');
 
-	let commandsArray = [];
+	CommandsArray = [];
 	(await PG(`${process.cwd()}/src/commands/*/*.js`)).map(async (file) => {
 		const command = require(file);
 
@@ -25,8 +25,8 @@ module.exports = async (client) => {
 		if (!command.description)
 			return Table.addRow(command.name, '❌ FAILED', 'Missing a description.');
 
-		if (command.permissions) {
-			if (Perms.includes(command.permissions))
+		if (command.permission) {
+			if (Perms.includes(command.permission))
 				command.defaultPermissions = false;
 			else
 				return Table.addRow(
@@ -37,23 +37,23 @@ module.exports = async (client) => {
 		}
 
 		client.commands.set(command.name, command);
-		commandsArray.push(command);
+		CommandsArray.push(command);
 
 		await Table.addRow(command.name, '🎆 SUCCESSFUL');
 	});
 
 	console.log(Table.toString());
 
-	//Permission check
+	//Permissions check
 
 	client.on('ready', async () => {
 		const MainGuild = await client.guilds.cache.get(GUILD_ID);
 
-		MainGuild.commands.set(commandsArray).then(async (command) => {
+		MainGuild.commands.set(CommandsArray).then(async (command) => {
 			const Roles = (commandName) => {
-				const cmdPerms = commandsArray.find(
+				const cmdPerms = CommandsArray.find(
 					(c) => c.name === commandName,
-				).permissions;
+				).permission;
 
 				if (!cmdPerms) return null;
 
