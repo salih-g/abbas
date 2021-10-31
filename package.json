@@ -8,8 +8,8 @@
 	"license": "MIT",
 	"private": false,
 	"scripts": {
-		"start": "node main.js",
-		"dev": "nodemon main.js"
+		"start": "node ./src/main.js",
+		"dev": "nodemon ./src/main.js"
 	},
 	"dependencies": {
 		"discord.js": "^13.3.0",
