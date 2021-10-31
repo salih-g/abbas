@@ -6,7 +6,7 @@ const { glob } = require('glob');
 const PG = promisify(glob);
 const Ascii = require('ascii-table');
 
-const { GUILD_ID } = require('../../config.json');
+const { GUILD_ID } = require('../../config.js');
 
 /**
  * @param {Client} client

@@ -1,12 +1,10 @@
 const { Client } = require('discord.js');
 const mongoose = require('mongoose');
-const { MONGO_URL } = require('../../../config.json');
+const { MONGO_URL, ACTIVITIY, ACTIVITIY_TYPE } = require('../../../config.js');
 
 /**
  * @param {Client} client
  */
-
-const { ACTIVITIY, ACTIVITIY_TYPE } = require('../../../config.json');
 
 module.exports = {
 	name: 'ready',
