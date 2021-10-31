@@ -26,8 +26,7 @@ module.exports = async (client) => {
 			return Table.addRow(command.name, '❌ FAILED', 'Missing a description.');
 
 		if (command.permission) {
-			if (Perms.includes(command.permission))
-				command.defaultPermissions = false;
+			if (Perms.includes(command.permission)) command.defaultPermission = false;
 			else
 				return Table.addRow(
 					command.name,
