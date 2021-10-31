@@ -4,7 +4,7 @@ const { Client } = require('discord.js');
  * @param {Client} client
  */
 
-const activitiy = process.env.ACTIVITIY;
+const { ACTIVITIY, ACTIVITIY_TYPE } = require('../../../config.json');
 
 module.exports = {
 	name: 'ready',
@@ -15,6 +15,6 @@ module.exports = {
 
 	execute(client) {
 		console.log(`I'm ready to go ${client.user.tag} 🤖!`);
-		client.user.setActivity(activitiy, { type: 'WATCHING' });
+		client.user.setActivity(ACTIVITIY, { type: ACTIVITIY_TYPE });
 	},
 };

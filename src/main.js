@@ -1,8 +1,7 @@
-require('dotenv').config();
 const { Client } = require('discord.js');
 const client = new Client({ intents: 32767 });
 
-const TOKEN = process.env.TOKEN;
+const { TOKEN } = require('../config.json');
 
 require('./handlers/events')(client);
 
