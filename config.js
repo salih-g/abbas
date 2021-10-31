@@ -1,6 +1,9 @@
 require('dotenv').config();
 
-const TOKEN = process.env.TOKEN;
+let TOKEN;
+if (process.env.DEV === '1') TOKEN = process.env.TOKEN_DEV;
+else TOKEN = process.env.TOKEN;
+
 const MONGO_URL = process.env.MONGO_URL;
 const PREFIX = process.env.PREFIX;
 const ACTIVITIY = process.env.ACTIVITIY;
