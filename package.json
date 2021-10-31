@@ -7,6 +7,9 @@
 	"author": "Salih Gumus",
 	"license": "MIT",
 	"private": false,
+	"engines": {
+		"node": "16.x"
+	},
 	"scripts": {
 		"start": "node ./src/main.js",
 		"dev": "nodemon ./src/main.js"
