@@ -1,6 +1,6 @@
 {
 	"name": "abbas",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Abbas is a discord bot",
 	"main": "main.js",
 	"repository": "https://github.com/sudanmerinosu/abbas",
@@ -15,9 +15,11 @@
 		"dev": "nodemon ./src/main.js"
 	},
 	"dependencies": {
+		"@discordjs/opus": "^0.6.0",
 		"ascii-table": "^0.0.9",
 		"discord.js": "^13.3.0",
 		"dotenv": "^10.0.0",
+		"ffmpeg-static": "^4.4.0",
 		"glob": "^7.2.0",
 		"mongoose": "^6.0.12"
 	},
