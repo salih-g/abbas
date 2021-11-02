@@ -9,6 +9,9 @@ const PREFIX = process.env.PREFIX;
 const ACTIVITIY = process.env.ACTIVITIY;
 const ACTIVITIY_TYPE = process.env.ACTIVITIY_TYPE;
 const GUILD_ID = process.env.GUILD_ID;
+const BASE_ROLE_ID = process.env.BASE_ROLE_ID;
+const WEBHOOK_ID = process.env.WEBHOOK_ID;
+const WEBHOOK_TOKEN = process.env.WEBHOOK_TOKEN;
 
 module.exports = {
 	TOKEN,
@@ -17,4 +20,7 @@ module.exports = {
 	ACTIVITIY,
 	ACTIVITIY_TYPE,
 	GUILD_ID,
+	BASE_ROLE_ID,
+	WEBHOOK_ID,
+	WEBHOOK_TOKEN,
 };
