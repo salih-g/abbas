@@ -1,1 +1,1 @@
-# This is a discord bot
+# This is a discord bott
