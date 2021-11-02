@@ -55,12 +55,14 @@ module.exports = {
 			});
 
 			await channel.bulkDelete(filtered, true).then((m) => {
-				Response.setDescription(`Cleared ${m.size} from ${Target}.`);
+				Response.setDescription(`Cleared ${m.size} messages from ${Target}.`);
 				interaction.reply({ embeds: [Response] });
 			});
 		} else {
 			await channel.bulkDelete(Amount, true).then((m) => {
-				Response.setDescription(`Cleared ${m.size} from this channel.`);
+				Response.setDescription(
+					`Cleared ${m.size} messages from this channel.`,
+				);
 				interaction.reply({ embeds: [Response] });
 			});
 		}
