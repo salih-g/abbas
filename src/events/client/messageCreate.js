@@ -1,5 +1,5 @@
 const { Client } = require('discord.js');
-const music = require('../../music');
+const { musicBot } = require('../../music');
 
 /**
  * @param {Client} client
@@ -12,6 +12,6 @@ module.exports = {
 	 */
 
 	execute(message, client) {
-		music(message, client);
+		musicBot(message, client);
 	},
 };
