@@ -25,8 +25,6 @@ client.distube = new DisTube.default(client, {
 	require(`./handlers/${handler}`)(client, PG);
 });
 
-const prefix = '.';
-
 // Queue status template
 const status = (queue) =>
 	`Volume: \`${queue.volume}%\` | Filter: \`${
