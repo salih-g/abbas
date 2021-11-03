@@ -13,7 +13,7 @@ module.exports = {
 	execute(member) {
 		const { user, guild } = member;
 
-		member.roles.add(BASE_ROLE_ID);
+		// member.roles.add(BASE_ROLE_ID);
 
 		const Welcomer = new WebhookClient({
 			id: WEBHOOK_ID,
