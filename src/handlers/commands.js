@@ -31,6 +31,11 @@ module.exports = async (client, PG) => {
 				);
 		}
 
+		if (command.aliases)
+			command.aliases.forEach((alias) =>
+				client.aliases.set(alias, command.name),
+			);
+
 		client.commands.set(command.name, command);
 		CommandsArray.push(command);
 

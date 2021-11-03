@@ -6,7 +6,7 @@ const { musicBot } = require('../../music');
  */
 
 module.exports = {
-	name: 'message',
+	name: 'messageCreate',
 	/**
 	 * @param {Client} client
 	 */

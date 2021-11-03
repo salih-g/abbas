@@ -21,6 +21,7 @@ client.distube = new DisTube.default(client, {
 	leaveOnStop: true,
 	plugins: [new SoundCloudPlugin(), new SpotifyPlugin()],
 });
+client.aliases = new Collection();
 
 ['events', 'commands'].forEach((handler) => {
 	require(`./handlers/${handler}`)(client, PG);

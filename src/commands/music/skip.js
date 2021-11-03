@@ -1,8 +1,9 @@
 const { Client } = require('discord.js');
+const { PREFIX } = require('../../../config');
 
 module.exports = {
-	name: 'stop',
-	description: 'Stop playing music',
+	name: 'skip',
+	description: 'Skips playing music',
 	inVoiceChannel: true,
 	/**
 	 * @param {Client} client
@@ -13,7 +14,11 @@ module.exports = {
 			return message.channel.send(
 				`❌ | There is nothing in the queue right now!`,
 			);
-		queue.stop();
-		message.channel.send(`✅ | Stopped!`);
+		try {
+			const song = queue.skip();
+			message.channel.send(`✅ | Skipped! Now playing:\n${song.name}`);
+		} catch (e) {
+			message.channel.send(`❌ | ${e}`);
+		}
 	},
 };

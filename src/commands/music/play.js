@@ -5,6 +5,7 @@ module.exports = {
 	name: 'play',
 	description: 'Play given music',
 	inVoiceChannel: true,
+	aliases: ['p'],
 	/**
 	 * @param {Client} client
 	 */

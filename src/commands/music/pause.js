@@ -1,8 +1,8 @@
 const { Client } = require('discord.js');
 
 module.exports = {
-	name: 'stop',
-	description: 'Stop playing music',
+	name: 'pause',
+	description: 'Pause playing music',
 	inVoiceChannel: true,
 	/**
 	 * @param {Client} client
@@ -13,7 +13,8 @@ module.exports = {
 			return message.channel.send(
 				`❌ | There is nothing in the queue right now!`,
 			);
-		queue.stop();
-		message.channel.send(`✅ | Stopped!`);
+
+		queue.pause();
+		message.channel.send('Paused the song for you :)');
 	},
 };
