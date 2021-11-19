@@ -1,4 +1,5 @@
 const { Client } = require('discord.js');
+const mongoose = require('mongoose');
 const { MONGO_URL, ACTIVITIY, ACTIVITIY_TYPE } = require('../../../config.js');
 
 /**
